@@ -74,10 +74,22 @@ export const useStore = create<TodoStore>()(
               : list,
           ),
         })),
+        deleteTodo: (listId: string, todoId: string) =>
+          set((state) => ({
+            lists: state.lists.map((list) =>
+              list.id === listId
+                ? {
+                    ...list,
+                    todos: list.todos.filter((todo) => todo.id !== todoId),
+                  }
+                : list
+            ),
+          })),
     }),
     {
       name: "todo-storage",
     },
   ),
+  
 )
 

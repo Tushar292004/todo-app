@@ -16,6 +16,7 @@ export function TodoDetail({ todo }: TodoDetailProps) {
   const updateTodo = useStore((state) => state.updateTodo)
   const toggleTodo = useStore((state) => state.toggleTodo)
   const toggleImportant = useStore((state) => state.toggleImportant)
+  const deleteTodo = useStore((state) => state.deleteTodo)
 
   return (
     <div className="w-[400px]">
@@ -63,7 +64,15 @@ export function TodoDetail({ todo }: TodoDetailProps) {
             <X className="h-4 w-4" />
           </Button>
           <span className="text-sm text-muted-foreground">Created {new Date(todo.createdAt).toLocaleDateString()}</span>
-          <Trash2 />
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => {
+              deleteTodo(selectedList, todo.id) // Call deleteTodo to remove the todo
+              setSelectedTodo(null) // Clear the selected todo
+            }}
+          ><Trash2 /></Button>
+          
         </div>
       </div>
     </div>
