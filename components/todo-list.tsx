@@ -37,10 +37,10 @@ export function TodoList() {
   return (
     <div className="flex flex-col">
       <div className="border-b mx-2">
-        <h2 className="flex items-center text-sm text-gray-500 font-bold p-2">To Do <ChevronDown /></h2>
-        <form onSubmit={handleAddTodo} className="space-y-4 bg-[#EEF6EF] border-t-2">
-          <div className="flex items-center gap-2 border-none">
-            <Input placeholder="Add A Task"  className="border-none mb-6 bg-[#EEF6EF]"  value={newTodo} onChange={(e) => setNewTodo(e.target.value)} />
+        <h2 className="flex items-center text-sm text-gray-500 dark:text-green-900 font-bold p-2">To Do <ChevronDown /></h2>
+        <form onSubmit={handleAddTodo} className="space-y-4 bg-[#EEF6EF] border-t-2 dark:bg-[#2F3630]">
+          <div className="flex items-center gap-2 border-none ">
+            <Input placeholder="Add A Task"  className="border-none mb-6 bg-[#EEF6EF] dark:bg-[#2F3630] "  value={newTodo} onChange={(e) => setNewTodo(e.target.value)} />
           </div>
           <div className="flex items-center gap-2">
             <Button type="button" variant="ghost" size="icon">
@@ -52,8 +52,8 @@ export function TodoList() {
             <Button type="button" variant="ghost" size="icon">
               <RefreshCw className="h-4 w-4"/>
             </Button>
-            <div className="ml-auto">
-              <Button type="submit" className="bg-[#357937] ">ADD TASK</Button>
+            <div className="ml-auto mr-2 mb-2">
+              <Button type="submit" className="bg-[#357937] dark:text-white">ADD TASK</Button>
             </div>
           </div>
         </form>
@@ -72,7 +72,7 @@ export function TodoList() {
                   toggleImportant(selectedList, todo.id)
                 }}
               >
-                <Star className={`h-4 w-4 ${todo.important ? "fill-[#357937] text-[#357937]" : ""}`} />
+                <Star className={`h-4 w-4 ${todo.important ? "fill-[#357937] dark:fill-white text-[#357937] dark:text-white"  : ""}`} />
               </Button>
             </div>
           ))}
@@ -92,7 +92,7 @@ export function TodoList() {
                       toggleImportant(selectedList, todo.id)
                     }}
                   >
-                    <Star className={`h-4 w-4 ${todo.important ? "fill-[#357937] text-[#357937]" : ""}`} />
+                    <Star className={`h-4 w-4 ${todo.important ? "fill-[#357937] dark:fill-white text-[#357937] dark:text-white" : ""}`} />
                   </Button>
                 </div>
               ))}
