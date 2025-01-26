@@ -15,9 +15,9 @@ export function Layout({ className, ...props }: LayoutProps) {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <nav className="flex justify-between p-3 items-center">
-        <div className="flex  justify-between">
+        <div className="flex  justify-between items-center" >
           <AlignJustify />
-          <img src="" alt="DoIt"  className="logo"/>
+          <h1 className="logo text-2xl font-bold tracking-tighter text-green-900 px-4">DoIt</h1>
         </div>
         <div className="flex justify-between gap-5 items-center">
           <Search />

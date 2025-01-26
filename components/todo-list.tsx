@@ -1,4 +1,4 @@
-import { Bell, Calendar, Plus, RefreshCw, Star } from "lucide-react"
+import { Bell, Calendar, ChevronDown, Plus, RefreshCw, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
@@ -36,10 +36,11 @@ export function TodoList() {
 
   return (
     <div className="flex flex-col">
-      <div className="border-b p-4">
-        <form onSubmit={handleAddTodo} className="space-y-4">
-          <div className="flex items-center gap-2">
-            <Input placeholder="Add A Task" value={newTodo} onChange={(e) => setNewTodo(e.target.value)} />
+      <div className="border-b mx-2">
+        <h2 className="flex items-center text-sm text-gray-500 font-bold p-2">To Do <ChevronDown /></h2>
+        <form onSubmit={handleAddTodo} className="space-y-4 bg-[#EEF6EF] border-t-2">
+          <div className="flex items-center gap-2 border-none">
+            <Input placeholder="Add A Task"  className="border-none mb-6 bg-[#EEF6EF]"  value={newTodo} onChange={(e) => setNewTodo(e.target.value)} />
           </div>
           <div className="flex items-center gap-2">
             <Button type="button" variant="ghost" size="icon">
@@ -52,7 +53,7 @@ export function TodoList() {
               <RefreshCw className="h-4 w-4"/>
             </Button>
             <div className="ml-auto">
-              <Button type="submit" className="bg-[#357937]">ADD TASK</Button>
+              <Button type="submit" className="bg-[#357937] ">ADD TASK</Button>
             </div>
           </div>
         </form>
