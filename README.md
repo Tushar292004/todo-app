@@ -8,10 +8,10 @@ npm run dev
 
 ```
 # Tech Stack
-Frontend Library : ReactJS
-Frontend Framework: NextJS
-Styling: Tailwind CSS
-UI COMPONENTS: ShadCN UI Library
+- Frontend Library : ReactJS
+- Frontend Framework: NextJS
+- Styling: Tailwind CSS
+- UI COMPONENTS: ShadCN UI Library
 
 # Functionalities
 1. User can add new todo

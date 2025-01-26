@@ -3,6 +3,7 @@ import { persist } from "zustand/middleware"
 import type { Todo, TodoList } from "@/types/todo"
 
 interface TodoStore {
+  deleteTodo: any
   lists: TodoList[]
   selectedTodo: Todo | null
   selectedList: string
