@@ -17,7 +17,7 @@ export function Layout({ className, ...props }: LayoutProps) {
       <nav className="flex justify-between p-3 items-center">
         <div className="flex  justify-between">
           <AlignJustify />
-          <img src=".\public\preview.webp" alt="DoIt"  className="logo"/>
+          <img src="" alt="DoIt"  className="logo"/>
         </div>
         <div className="flex justify-between gap-5 items-center">
           <Search />
